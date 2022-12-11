@@ -29,7 +29,7 @@ class RuleMiner(object):
         # function.
         
         #Interating through each <itemset> of <data>: Check.all(axis = 1).sum() 
-        items_in_dataset = (data[itemset] == 1).all(axis = 1).sum()
+        items_in_dataset = (data[itemset] >= 1).all(axis = 1).sum() 
         return items_in_dataset
         
     def merge_itemsets(self, itemsets):
